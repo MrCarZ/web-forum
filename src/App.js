@@ -2,24 +2,28 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Home, ThreadDetails, NewThread } from "./components";
+
 import "./App.css";
 
 class App extends Component {
+  
   render() {
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/new-thread">
-            <NewThread />
-          </Route>
-          <Route path="/thread-details">
-            <ThreadDetails />
-          </Route>
-        </Switch>
-      </BrowserRouter>
+      <div style={{ textAlign: "center" }}>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/new-thread">
+              <NewThread />
+            </Route>
+            <Route path="/thread-detail">
+              <ThreadDetails />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      </div>
     );
   }
 }
