@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Home, ThreadDetails, NewThread } from "./components";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+
+class App extends Component {
+  
+  render() {
+    return (
+      <div style={{ textAlign: "center" }}>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/new-thread">
+              <NewThread />
+            </Route>
+            <Route path="/thread-detail">
+              <ThreadDetails />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
+
+ReactDOM.render(<App />, document.getElementById("root"));
 
 export default App;
