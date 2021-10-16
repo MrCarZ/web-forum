@@ -1,8 +1,10 @@
 # Web Forum
 
 ## Running Front-End
-  In order to run the you should use the following command while at the project directory
+  In order to run the you should use the following command while at the project directory for downloading the necessary packages used in the client
+### `npm install`
 
+  Then you can run the app with the next line
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -14,7 +16,7 @@ You will also see any lint errors in the console.
 ## Running Back-End
   In order to run the mini-API created in order to be consumed by the client, you should change to **server** directory by using the following terminal command
 
-### `ls server`
+### `cd server`
 
 Then, you can download the necessary packages used in the server with
 
